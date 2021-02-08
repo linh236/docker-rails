@@ -10,18 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_07_162033) do
+ActiveRecord::Schema.define(version: 2021_02_08_083839) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "items", force: :cascade do |t|
     t.string "name"
-    t.float "cold_cost"
+    t.float "old_cost"
     t.float "new_cost"
+    t.string "unit"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "unit"
   end
 
   create_table "users", force: :cascade do |t|
@@ -37,15 +37,17 @@ ActiveRecord::Schema.define(version: 2021_02_07_162033) do
   end
 
   create_table "uses", force: :cascade do |t|
-    t.json "item_id"
-    t.json "amount"
+    t.integer "amount"
     t.date "date"
     t.string "note"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "item_id"
     t.bigint "user_id"
+    t.index ["item_id"], name: "index_uses_on_item_id"
     t.index ["user_id"], name: "index_uses_on_user_id"
   end
 
+  add_foreign_key "uses", "items"
   add_foreign_key "uses", "users"
 end

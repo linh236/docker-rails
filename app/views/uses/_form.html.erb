@@ -12,13 +12,8 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :item_id %>
-    <%= form.text_field :item_id %>
-  </div>
-
-  <div class="field">
     <%= form.label :amount %>
-    <%= form.text_field :amount %>
+    <%= form.number_field :amount %>
   </div>
 
   <div class="field">
@@ -31,8 +26,12 @@
     <%= form.text_field :note %>
   </div>
   <div class="field">
+    <%= form.label :item_id %>
+    <%= form.text_field :item_id %>
+  </div>
+  <div class="field">
     <%= form.label :user_id %>
-    <%= form.text_field :user_id %>
+    <%= form.text_field :user_id, value: current_user.id %>
   </div>
 
   <div class="actions">

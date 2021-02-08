@@ -64,6 +64,6 @@ class UsesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def use_params
-      params.require(:use).permit(:item_id, :amount, :date, :note, :user_id)
+      params.require(:use).permit(:amount, :date, :note, :user_id, :item_id, :date)
     end
 end

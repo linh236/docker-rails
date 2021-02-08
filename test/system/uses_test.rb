@@ -16,7 +16,6 @@ class UsesTest < ApplicationSystemTestCase
 
     fill_in "Amount", with: @use.amount
     fill_in "Date", with: @use.date
-    fill_in "Item", with: @use.item_id
     fill_in "Note", with: @use.note
     click_on "Create Use"
 
@@ -30,7 +29,6 @@ class UsesTest < ApplicationSystemTestCase
 
     fill_in "Amount", with: @use.amount
     fill_in "Date", with: @use.date
-    fill_in "Item", with: @use.item_id
     fill_in "Note", with: @use.note
     click_on "Update Use"
 

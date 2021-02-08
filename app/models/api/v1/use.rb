@@ -1,5 +1,5 @@
 module Api::V1
   class Use < ApiRecond
-    scope :getAll,->{reorder(:id)}
+    belongs_to :item
   end
 end

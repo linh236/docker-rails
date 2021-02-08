@@ -5,7 +5,6 @@
 <table>
   <thead>
     <tr>
-      <th>Item</th>
       <th>Amount</th>
       <th>Date</th>
       <th>Note</th>
@@ -16,7 +15,6 @@
   <tbody>
     <% @uses.each do |use| %>
       <tr>
-        <td><%= use.item_id %></td>
         <td><%= use.amount %></td>
         <td><%= use.date %></td>
         <td><%= use.note %></td>

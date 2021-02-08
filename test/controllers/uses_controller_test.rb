@@ -17,7 +17,7 @@ class UsesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create use" do
     assert_difference('Use.count') do
-      post uses_url, params: { use: { amount: @use.amount, date: @use.date, item_id: @use.item_id, note: @use.note } }
+      post uses_url, params: { use: { amount: @use.amount, date: @use.date, note: @use.note } }
     end
 
     assert_redirected_to use_url(Use.last)
@@ -34,7 +34,7 @@ class UsesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update use" do
-    patch use_url(@use), params: { use: { amount: @use.amount, date: @use.date, item_id: @use.item_id, note: @use.note } }
+    patch use_url(@use), params: { use: { amount: @use.amount, date: @use.date, note: @use.note } }
     assert_redirected_to use_url(@use)
   end
 
