@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  item_id: 
+  amount: 
+  date: 2021-02-07
+  note: MyString
+
+two:
+  item_id: 
+  amount: 
+  date: 2021-02-07
+  note: MyString

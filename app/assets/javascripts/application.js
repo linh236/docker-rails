@@ -11,6 +11,13 @@
 // about supported directives.
 //
 //= require rails-ujs
+//= require jquery
+//= require jquery_ujs
+//= require bootstrap/bootstrap-tooltip
+//= require bootstrap/bootstrap-rails-popover
 //= require activestorage
 //= require turbolinks
+//= require stisla
+//= require scripts
+//= require custom
 //= require_tree .

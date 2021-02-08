@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Uses</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Amount</th>
+      <th>Date</th>
+      <th>Note</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @uses.each do |use| %>
+      <tr>
+        <td><%= use.item_id %></td>
+        <td><%= use.amount %></td>
+        <td><%= use.date %></td>
+        <td><%= use.note %></td>
+        <td><%= link_to 'Show', use %></td>
+        <td><%= link_to 'Edit', edit_use_path(use) %></td>
+        <td><%= link_to 'Destroy', use, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Use', new_use_path %>

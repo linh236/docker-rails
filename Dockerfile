@@ -5,3 +5,5 @@ WORKDIR /tetproject
 COPY Gemfile /tetproject/Gemfile
 COPY Gemfile.lock /tetproject/Gemfile.lock
 RUN bundle install
+ ADD . .
+ CMD ["puma"]
