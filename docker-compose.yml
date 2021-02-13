@@ -8,6 +8,10 @@ services:
     ports:
       - "5432:5432"
   app:
+    image: tetproject:latest
+    entrypoint:
+      - bash
+      - entrypoint.sh
     build: .
     container_name: tetpostgres_app
     command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
@@ -21,4 +25,4 @@ services:
       - "3000:3000"
     depends_on:
       - db
-    command: puma
+    # command: puma

@@ -6,5 +6,5 @@ COPY Gemfile /tetproject/Gemfile
 COPY Gemfile.lock /tetproject/Gemfile.lock
 RUN bundle install
 RUN rm /bin/sh && ln -s /bin/bash /bin/sh
-ADD . .
-CMD ["puma"]
+#ADD . .
+#CMD ["puma"]

@@ -20,6 +20,7 @@
         <td><%= item.old_cost %></td>
         <td><%= item.new_cost %></td>
         <td><%= item.unit %></td>
+        <td><%=item.image%></td>
         <td><%= link_to 'Show', item %></td>
         <td><%= link_to 'Edit', edit_item_path(item) %></td>
         <td><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>

@@ -49,6 +49,8 @@ class ItemsController < ApplicationController
 
   # DELETE /items/1 or /items/1.json
   def destroy
+    @item.remove_image!
+    @item.save
     @item.destroy
     respond_to do |format|
       format.html { redirect_to items_url, notice: "Item was successfully destroyed." }
@@ -64,6 +66,6 @@ class ItemsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def item_params
-      params.require(:item).permit(:name, :old_cost, :new_cost, :unit)
+      params.require(:item).permit(:name, :old_cost, :new_cost, :unit, :image)
     end
 end
