@@ -10,10 +10,10 @@ module Api::V1
         if user_pass == password
           render json: {status: 200, data: user}
         else
-          render json: {data: 402}
+          render json: {status: 402}
         end
-      else
-        render json: {data: 404}
+      else 
+        render json: {status: 404}
       end
     end
   end
