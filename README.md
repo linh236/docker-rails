@@ -24,4 +24,5 @@ Things you may want to cover:
 
 * ...
 # docker-rails
+bundle:  docker-compose run app bundle
 attrack container:  docker exec -it  tetpostgres_app /bin/bash
