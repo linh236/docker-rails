@@ -24,3 +24,4 @@ Things you may want to cover:
 
 * ...
 # docker-rails
+attrack container:  docker exec -it  tetpostgres_app /bin/bash
